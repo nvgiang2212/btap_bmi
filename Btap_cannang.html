@@ -8,9 +8,13 @@
 		let weight = parseInt(prompt('Nhập chỉ số cân nặng (kg)'));
 		let height = parseInt(prompt('Nhập chỉ số chiều cao (cm)'));
 
+		// chuyển đổi chiều cao sang mét
 		height = height/100;
 
 		let bmi = weight / (height*height);
+
+		// làm tròn giá trị bmi
+		bmi = Math.round(bmi * 1000)/1000;
 
 		if (bmi < 18.5) {
 			alert(bmi + '- Underweight');
